@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style-home.css"
+    <title></title>
+</head>
+<body class="hoome">
+
+    <a href="home.html"><button class="btn2" type="submit" id="volver">Refrescar Pagina</button></a>
+    
+    <button class="btn" id="btn-abrir-modal">Finalizar</button>
+
+    <!-- I N I C I O  M O D A L    -->
+
+    <div class="Modal">
+    
+        <dialog id="modal">
+
+            <h2 class="Cometarios">Comentarios</h2>
+            <textarea maxlength="100" class="caja-de-texto" name="coments" id="coments" cols="30" rows="20"
+            placeholder="Dejanos tus comentarios. Maximo 100 Caracteres"></textarea>
+            <br>
+
+            <a href="login.html"><button onclick="mymensaje()" class="btn-close" id="btn-cerrar-modal">Enviar</button></a>
+
+        </dialog>
+    </div>
+    
+    <!--I N I C I O  U S O  C A M A R A -->
+
+    <div class="movie">
+        <iframe width="800" height="600" src="https://www.youtube.com/embed/Lx4YFmORsWc" title="YouTube video player"
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen class="video">
+        </iframe>
+
+    </div>
+        <div class="div_centrado fondo_deg">
+            <div id="cont_webcam" class="div_centrado">
+                <div class="borde">
+                    <video src="" id="video" playsinline autoplay></video>
+                </div>
+                <canvas id="canvas" width="400px" height="300px"></canvas>
+            </div>
+                <div id="mensaje" class="">
+
+                </div>
+        </div>
+
+        <!--J S   U S O   D E    C A M A R A -->
+    <script src="funciones.js">
+        
+
+    </script>
+
+    <!--I N I C I O    J S    F U N C I O N    M O D A L-->
+    
+<script> //funcion modal para crear un PopUp con comentarios
+    const btnAbrirModal =
+        document.querySelector("#btn-abrir-modal");
+    const btnCerrarModal =
+        document.querySelector("#btn-cerrar-modal");
+    const modal =
+        document.querySelector("#modal");
+
+    btnAbrirModal.addEventListener("click", () => {
+        modal.showModal();
+    })
+
+    btnCerrarModal.addEventListener("click", () => {
+        modal.close();
+    })
+</script>
+
+<!--Funcion JavaScript para enviar mensaje de agradecimiento-->
+
+<script>
+    function mymensaje(){
+        alert("Gracias por participar, te esperamos nuevamente");
+    }
+</script>
+
+
+    
+</body>
+</html>

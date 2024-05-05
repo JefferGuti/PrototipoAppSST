@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROYECTO APP POO</title>
+    <link rel="stylesheet" href="./style/style.css"
+</head>
+    <body class="inicio">
+        <section class="formulario"> 
+            <!--Inicio Formulario-->
+            <h1>Formulario de Registro</h1>
+            <input class="Controls" type="text" name="Nombre" id="nombres" placeholder="Ingrese su nombre completo" required="">
+            <input class="Controls" type="text" name="numeros" id="nombres" placeholder="Ingrese número de documento" required="" pattern="[0-9]+">
+            <input class="Controls" type="email" name="Nombre" id="nombres" placeholder="Correo Electronico" required="">
+            <input class="Controls" type="password" name="contraseña" id="nombres" placeholder="Ingrese su contraseña" required="">
+            <p>
+            
+            <input type="checkbox" disabled="" checked="" name="TYC" id="Acepto" > Acepto <a href="#" id="btn-abrir-modal">Terminos y Condiciones</a></p>
+
+            
+
+            <a href="login.html"><button class="btn" type="button" id="tbn">Registrar</button></a>
+            
+        </section>
+
+        <div class="Modal">
+
+            <dialog id="modal">
+                <h2 class="TyC">Terminos y Condiciones</h2>
+                <p>El diligenciamiento de datos y realización de los ejercicios tomará aproximadamente 20 minutos.
+                    De conformidad con la Ley 1581 de 2012, al diligenciar el presente formulario, hacer uso de la APP y registro de las
+                    actividades dentro de la misma, usted autoriza a la compañía para el tratamiento de los datos personales aquí
+                    suministrados, incluidos los sensibles, los cuales son recolectados con el único fin del seguimiento al plan de
+                    seguridad y salud en el trabajo - SST. Asi mismo, declara haber sido informado del carácter facultativo de la entrega de
+                    esta información, considerando, no obstante, que es necesaria para contribuir al cuidado y salud del trabajador.
+                    Asi mismo autoriza usted el uso de camara y microfono de su dispositivo mientras la aplicación se encuentre en ejecución
+                    para la debida grabación de información y soporte como pruebas al área encargada.
+                </p>
+                <br>
+                <button class="btn-close" id="btn-cerrar-modal">Cerrar</button>
+            </dialog>
+        </div>
+
+        <!--footer-->
+
+        <footer class="fin">
+            <p class="derechos">Todos los derechos reservados © 2022 Jefferson Gutierrez</p>
+        </footer>
+
+        <!--INICIO JS-->
+
+        <script> //funcion modal para crear un PopUp con terminos y condiciones
+            
+            const btnAbrirModal =
+            document.querySelector("#btn-abrir-modal");
+            const btnCerrarModal =
+            document.querySelector("#btn-cerrar-modal");
+            const modal =
+                document.querySelector("#modal");
+
+            btnAbrirModal.addEventListener("click",()=>{
+                modal.showModal();
+            })
+
+            btnCerrarModal.addEventListener("click",()=>{
+                modal.close();
+            })
+        </script>
+
+    </body>
+</html>
