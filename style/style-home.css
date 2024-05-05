@@ -1,0 +1,104 @@
+.hoome{
+    background-image: url(/gym.png);
+    background-position: center;
+    background-position: center;
+}
+
+.movie{
+    margin-top: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+.div_centrado{
+    text-align: center;
+}
+
+/*BOTON DE FINALIZACION*/
+
+.btn{
+    margin-top: 25px;
+    margin-left: 2%;
+    padding: 9px;
+    font-size: 15px;
+    cursor: pointer;
+    /*Cambiar el curso a mano cuando pase por encima*/
+}
+
+/*BOTON DE FINALIZACION*/
+
+.btn:hover {
+    /*Se le dael formato para cambio de color cuando pase por encima*/
+    background-color: red;
+    color: white;
+}
+
+/*BOTON DE REFRESCAR */
+
+.btn2{
+    margin-top: 25px;
+    margin-left: 40%;
+    padding: 9px;
+    font-size: 15px;
+    width: 150px;
+    cursor: pointer;
+    /*Cambiar el curso a mano cuando pase por encima*/
+}
+
+.btn2:hover {
+    /*Se le dael formato para cambio de color cuando pase por encima*/
+    background-color: red;
+    color: white;
+}
+
+/*MODAL*/
+
+/*MODAL*/
+#modal::backdrop {
+    background-color: rgba(0, 0, 0, .55);
+    ;
+}
+
+#modal {
+    padding: 80px;
+    width: 50%;
+    text-align: center;
+    max-width: 40ch;
+    margin: auto;
+    border-radius: 40px;
+}
+
+/*COMENTARIOS*/
+
+.comentarios {
+    margin: 10px 10px 20px 10px;      /*Up Rigth Down Left*/
+
+}
+
+.caja-de-texto{
+    max-width: 40ch;
+    max-height: 50ch;
+    
+}
+
+.itext{
+    width: 100%;
+    height: 100%;
+}
+
+.btn-close {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    /*Cambiar el curso a mano cuando pase por encima*/
+}
+
+.btn-close:hover {
+    /*Se le dael formato para cambio de color cuando pase por encima*/
+    background-color: red;
+    color: white;
+
+}
