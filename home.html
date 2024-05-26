@@ -8,6 +8,41 @@
     <title></title>
 </head>
 <body class="hoome">
+    
+    <!--Botón Editar-->
+
+    <h2>Editar Perfil</h2>
+    
+    <form action="#" method="post">
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br>
+    
+        <label for="apellido">Apellido:</label><br>
+        <input type="text" id="apellido" name="apellido" required><br>
+    
+        <label for="fecha_nacimiento">Fecha de Nacimiento:</label><br>
+        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required><br>
+    
+        <label for="area">Área:</label><br>
+        <select id="area" name="area">
+            <option value="marketing">Marketing</option>
+            <option value="ventas">Ventas</option>
+            <option value="tecnologia">Tecnología</option>
+            <option value="finanzas">Finanzas</option>
+            <!-- Agrega más opciones según sea necesario -->
+        </select><br>
+    
+        <label for="cargo">Cargo:</label><br>
+        <input type="text" id="cargo" name="cargo" readonly value="Jefe Sistemas"><br>
+        <!-- El atributo readonly hace que el campo sea de solo lectura -->
+    
+        <!-- Botón para editar -->
+        <input type="button" value="Editar" onclick="habilitarEdicion()">
+    
+        <input type="submit" value="Guardar Cambios">
+    </form>
+
+    <!--Fin Boton Editar-->
 
     <a href="home.html"><button class="btn2" type="submit" id="volver">Refrescar Pagina</button></a>
     
@@ -80,6 +115,16 @@
 <script>
     function mymensaje(){
         alert("Gracias por participar, te esperamos nuevamente");
+    }
+</script>
+
+<script>
+    function habilitarEdicion() {
+        // Obtener el campo de cargo
+        var cargo = document.getElementById("cargo");
+
+        // Habilitar la edición cambiando la propiedad readonly a false
+        cargo.readOnly = false;
     }
 </script>
 
